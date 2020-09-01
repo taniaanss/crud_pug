@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name='description', content='')
+        meta(name='author', content='')
+        title CRUD SISWA
+        link(rel="stylesheet", href="./css/bootstrap.min.css")
+        //- link(href='/css/bootstrap.css', rel='stylesheet')
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+        style
+            include css/bootstrap.min.css
+    body
+        nav.navbar.navbar-expand-lg.navbar-dark(style="background-color:#ae6bed;")
+            a.navbar-brand(href='#') CRUD
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            .collapse.navbar-collapse(id='navbarSupportedContent')
+                ul.navbar-nav.mr-auto
+                    li.nav-item.active
+                        a.nav-link(href='#') Beranda
+                    li.nav-item
+                        a.nav-link(href='/food-courts') Food Courts
+                    li.nav-item
+                        a.nav-link(href='/parking') Parking
+                    li.nav-item
+                        a.nav-link(href='/places') Places
+                    ul.navbar-nav.float-right
+                form.form-inline.my-02.my-lg-0
+                    input.form-control.mr-sm-2(type="search", name="", placeholder="Cari Data")
+                    button.btn.btn-outline-light.my-2.my-sm-0(type="submit") Cari
+        .container
+            h2.mt-5 Data Siswa
+            button.btn.mb-3(type="button", data-toggle="tooltip", data-placement="top", title="Tambah Data Siswa", style="background-color:#ae6bed; color:#fff; float:right;") +
+            table.table.table-hover.text-center
+                thead
+                    tr
+                        th(scope="col") #
+                        th(scope="col") NISN
+                        th(scope="col") Nama Lengkap
+                        th(scope="col") Jenis Kelamin
+                        th(scope="col") Alamat
+                        th(scope="col") Kelas
+                        th(scope="col") Aksi
+                    tr
+                tbody
+                    tr
+                        th(scope="row") 1
+                        td 02111852
+                        td Tania
+                        td Perempuan
+                        td Bogor
+                        td 12
+                        td edit hapus
+                    tr
+                        th(scope="row") 2
+                        td 02111852
+                        td Tania
+                        td Perempuan
+                        td Bogor
+                        td 12
+                        td edit hapus
+        script
+            include js/jquery.slim.min.js
+            include js/popper.min.js
+            include js/bootstrap.min.js
+        //- script(src='/js/jquery.min.js')
+        //- script(src='/js/bootstrap.js')

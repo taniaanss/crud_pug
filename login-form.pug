@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Login Users
+        link(rel="stylesheet", href="/nodejs/crud_tugas5/css/style.css")
+        script(src="https://kit.fontawesome.com/99a5ffcae5.js")
+    body
+        img(src="./wave.png", class="wave", alt="wave", style="width:100px; height:100px;")
+        div(class="container")
+            div(class="img")
+                img(src="img.png", alt="alt")
+            if msg
+                p #{msg}
+            div(class="login-container")
+                form(action="/login" method="post")
+                    img.avatar(src="avatar.svg", alt="alt")
+                    h2 Selamat Datang!
+                    div(class="input-div.one")
+                        div(class="i")
+                            i(class="fas.fa-user")
+                        div
+                            label(for="user_id") User ID
+                        div
+                            input(type="text", name="user_id")
+                    div(class="input-div.two")
+                        div(class="i")
+                            i(class="fas.fa-lock")
+                        div
+                            label(for="user_password") Password
+                        div
+                            input(type="password", name="user_password")
+                    div(style="margin-top:10px")
+                        input(type="submit", value="Masuk", class="btn")
+        //- script(src="/js/main.js")
