@@ -7,15 +7,15 @@ html(lang="en")
         link(rel="stylesheet", href="/nodejs/crud_tugas5/css/style.css")
         script(src="https://kit.fontawesome.com/99a5ffcae5.js")
     body
-        img(src="./wave.png", class="wave", alt="wave", style="width:100px; height:100px;")
+        img(src="https://raw.githubusercontent.com/taniaanss/crud_pug/master/wave.png", class="wave", alt="wave", style="width:100px; height:100px;")
         div(class="container")
             div(class="img")
-                img(src="img.png", alt="alt")
+                img(require=("./local/img.png"), alt="alt")
             if msg
                 p #{msg}
             div(class="login-container")
                 form(action="/login" method="post")
-                    img.avatar(src="avatar.svg", alt="alt")
+                    img.avatar(src="https://raw.githubusercontent.com/taniaanss/crud_pug/5d9990564d2d2cf741d14574f2070a5e23be4818/avatar.svg", alt="alt")
                     h2 Selamat Datang!
                     div(class="input-div.one")
                         div(class="i")
