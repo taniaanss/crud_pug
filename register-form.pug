@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Daftar Akun
+        link(rel="stylesheet", href="/nodejs/crud_tugas5/css/style.css")
+        style
+            include css/style.css
+        script(src="https://kit.fontawesome.com/99a5ffcae5.js")
+    body
+        img.wave(src="https://raw.githubusercontent.com/taniaanss/crud_pug/master/img/wave.png", alt="wave")
+        div(class="container")
+            div(class="img")
+                img(src="https://raw.githubusercontent.com/taniaanss/crud_pug/abd285c877adea452a7576d69aaf061c0cd3b24c/img/img2.svg", alt="alt")
+            div(class="login-container")
+                div(class="daftar")
+                        h5 Masuk
+                        div(class=i)
+                            a(onClick="javascript:history.go(-1);")
+                                i(class="fas fa-sign-in-alt fa-2x")
+                form(action="/register" method="post")
+                    img.avatar(src="https://raw.githubusercontent.com/taniaanss/crud_pug/34c1badc1ba8c07d63420fb2e388b610fa6f3ea2/img/avatar.svg", alt="alt")
+                    h2 Buat Akun
+                    div(class="input-div one focus")
+                        div(class="i")
+                            i(class="fas fa-user")
+                        div
+                            h5 User ID
+                            input(value="user", name="user_id", class="input", disabled)
+                    div(class="input-div one")
+                        div(class="i")
+                            i(class="fas fa-user")
+                        div
+                            h5 Username
+                            input(type="text", name="user_nama", class="input")
+                    div(class="input-div two")
+                        div(class="i")
+                            i(class="fas fa-lock")
+                        div
+                            h5 Password
+                            input(type="password", name="user_password", class="input")
+                    if msg
+                        p(style="color:red; font-size:12px; margin-top:15px;") #{msg}
+                    input(type="submit", value="Daftar", class="btn")
+        script
+            include js/main.js
