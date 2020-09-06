@@ -5,32 +5,37 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Login Users
         link(rel="stylesheet", href="/nodejs/crud_tugas5/css/style.css")
+        style
+            include css/style.css
         script(src="https://kit.fontawesome.com/99a5ffcae5.js")
     body
-        img(src="https://raw.githubusercontent.com/taniaanss/crud_pug/master/wave.png", class="wave", alt="wave", style="width:100px; height:100px;")
+        img.wave(src="https://raw.githubusercontent.com/taniaanss/crud_pug/master/img/wave.png", alt="wave")
         div(class="container")
             div(class="img")
-                img(require=("./local/img.png"), alt="alt")
-            if msg
-                p #{msg}
+                img(src="https://raw.githubusercontent.com/taniaanss/crud_pug/abd285c877adea452a7576d69aaf061c0cd3b24c/img/img2.svg", alt="alt")
             div(class="login-container")
+                div(class="daftar")
+                    h5 Daftar
+                    div(class=i)
+                        a(href="/register")
+                            i(class="fas fa-sign-in-alt fa-2x")
                 form(action="/login" method="post")
-                    img.avatar(src="https://raw.githubusercontent.com/taniaanss/crud_pug/5d9990564d2d2cf741d14574f2070a5e23be4818/avatar.svg", alt="alt")
+                    img.avatar(src="https://raw.githubusercontent.com/taniaanss/crud_pug/34c1badc1ba8c07d63420fb2e388b610fa6f3ea2/img/avatar.svg", alt="alt")
                     h2 Selamat Datang!
-                    div(class="input-div.one")
+                    div(class="input-div one")
                         div(class="i")
-                            i(class="fas.fa-user")
+                            i(class="fas fa-user")
                         div
-                            label(for="user_id") User ID
-                        div
-                            input(type="text", name="user_id")
-                    div(class="input-div.two")
+                            h5 User ID
+                            input(type="text", name="user_id", class="input")
+                    div(class="input-div two")
                         div(class="i")
-                            i(class="fas.fa-lock")
+                            i(class="fas fa-lock")
                         div
-                            label(for="user_password") Password
-                        div
-                            input(type="password", name="user_password")
-                    div(style="margin-top:10px")
-                        input(type="submit", value="Masuk", class="btn")
-        //- script(src="/js/main.js")
+                            h5 Password
+                            input(type="password", name="user_password", class="input")
+                    if msg
+                        p(style="color:red; font-size:12px; margin-top:15px;") #{msg}
+                    input(type="submit", value="Masuk", class="btn")
+        script
+            include js/main.js
